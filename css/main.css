@@ -1,0 +1,1048 @@
+/********************************
+GENERAL
+********************************/
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: dimgrey;
+}
+
+a:hover,
+a:focus,
+.selected {
+    color: rgb(233,102,0);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    background: #efefef;
+    text-align: center;
+}
+
+#bodyhome {
+        padding-top: 102px;
+}
+
+/********************************
+SPLASH PAGE
+********************************/
+
+#splash::-webkit-scrollbar { 
+    display: none; 
+}
+
+#main-photo {
+    background-image: url("../img/pride_group.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 39% 15%;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font-size: 2.4rem;
+    position: relative;
+}
+
+#main-text {
+    background-color: rgba(119, 193, 80, .95);
+    position:absolute;
+    top: 50%;
+    width: 100%;
+    font-weight: 500;
+    padding: 8px 0 8px;
+    letter-spacing: .05em;
+}
+
+@keyframes bikemove {
+    
+    0% {
+        left: -60px;
+    }
+    100%{
+        left: 1300px;
+    }
+
+}
+
+@-webkit-keyframes bikemove {
+    
+    0% {
+        left: -60px;
+    }
+    100%{
+        left: 1300px;
+    }
+
+}
+
+@-moz-keyframes bikemove {
+    
+    0% {
+        left: -60px;
+    }
+    100%{
+        left: 1300px;
+    }
+
+}
+
+#bikers {
+    height: 32px;
+    position: absolute;
+    left: 1300px;
+    top: 29px;
+     animation: bikemove 12s infinite linear;
+    -webkit-animation: bikemove 12s infinite linear;
+    -moz-animation: bikemove 12s infinite linear;
+}
+
+#mainButton {
+    background-color: rgba(0,0,0,.7);
+}
+
+.button1 {  
+    font-size: 1.3em;
+    border: 3px white solid; 
+    position: absolute;
+    left: 0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    background: rgba(0,0,0,.4);
+    transition: 500ms;
+    transition-property: background;
+}
+
+.button1 a {
+    color: white;
+    display: block;
+    transition: 500ms;
+    transition-property: color;
+}
+
+#mainButton:hover {
+    border: 2px rgba(0,0,0,.7) solid;
+    background-color: rgba(255,255,255,.8);
+    transition: 500ms;
+}
+
+#mainButton a:hover {
+    color: black;
+    transition: 500ms;    
+}
+
+#arrows {
+    position: absolute; /*centering issue with position:absolute*/
+    margin-left: auto; /*center the arrows*/
+    margin-right: auto; /*center the arrows*/
+    left: 0;           /*center the arrows*/
+    right: 0;          /*center the arrows*/
+    bottom: 31px;
+    height: 28px;
+    width: 47px;
+    cursor: pointer;
+    /*background: linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,.05));*/
+}
+
+
+#lower-div {
+    margin: 0 auto;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(119, 193, 80);
+    text-align: center;
+    font-size: 1rem;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+
+#lower-div img {
+    margin-top: 80px;
+}
+
+.lower-text {
+    width: 80%;
+    margin: 15% auto;
+}
+
+#arrowsUp {
+    z-index: 1000;
+    height: 28px;
+    width: 47px;
+    cursor: pointer;
+    position: absolute;
+    margin-left: auto; /*center the arrows*/
+    margin-right: auto; /*center the arrows*/
+    left: 0;           /*center the arrows*/
+    right: 0;          /*center the arrows*/  
+    top: -40px;
+}
+
+
+/*********************************************
+HOME PAGE
+*********************************************/
+#header {
+    position: relative;
+    padding: 8px;
+    background-color: /*rgba(34,139,34,.25)*/ rgba(255,255,255,1);
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+#logo {
+    height: 82px;
+    z-index: 1000;
+    float: left;
+    margin-left: 3%;
+}
+
+#browser_menu {
+    display: none;
+}
+
+#nav_lines {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 15px 15px 0 0;
+    float: right;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger {   
+    position: absolute;
+    right: 12px; 
+    bottom: 17px;    
+    border-top: 4px black solid;
+    box-shadow: 
+    0 11px 0 0 black,
+    0 22px 0 0 black;
+    width: 26px;
+    float: right;
+/********************3 lines menu*/
+}
+
+.hamburger_toggle {
+    border-top: 4px red solid;
+    box-shadow: 
+    0 11px 0 0 red,
+    0 22px 0 0 red;
+/********************3 lines menu*/
+}
+
+#mobile_menu {
+    text-align: center;
+    font-size: 1.6rem;
+    position: fixed;
+    top: 95px;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background-color: forestgreen;
+    display: none;
+}
+
+#mobile_menu a {
+    margin: 0 auto;
+    display: block;
+    padding: 10px 0 10px;
+    color: white;
+    text-shadow: -1px 1px 4px black;
+    border-bottom: 2px white solid;
+    width: 100%;
+    transition: all, 500ms;
+}
+
+#mobile_menu a[href*="home"]{
+    background-color: red;
+}
+
+#mobile_menu a[href*="about"]{
+    background-color: orange;
+}
+
+#mobile_menu a[href*="youth"]{
+    background-color: yellow;
+}
+
+#mobile_menu a[href*="photos"]{
+    background-color: green;
+}
+
+#mobile_menu a[href*="volunteer"]{
+    background-color: blue;
+}
+
+#mobile_menu a[href*="register"]{
+    background-color: purple;
+}
+
+#mobile_menu a:hover {
+    color: black;
+    background-color: white;
+    transition: all, 500ms;
+}
+
+.jumbotron {
+    background: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)),url("../img/homephoto.jpg");
+    background-position: 20% 30%;
+    background-size: cover;
+    height: 600px;
+    text-align: center;
+    margin-top: -51px;
+    color: white;
+    position: relative;
+}
+
+#sunday {
+    padding-top: 300px;
+    font-size: 3em; 
+    font-weight: 700;
+    text-shadow: 3px 3px 3px black;
+}
+
+#c2c {
+    font-size: 2.6em;
+    /*font-weight: 100;*/
+    margin-top: -30px;
+    text-shadow: 2px 3px 3px black;
+}
+
+.buttonx {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 29px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    width: 180px;
+    border: 3px white solid;
+    font-size: 1.6em;
+    background-color: rgba(0,0,0,.8);
+    display: block;
+    transition: all, 500ms;
+}
+
+.buttonx a {
+    padding-top: 2px;
+    color: white;
+    display: block; 
+    transition: all, 500ms;
+}
+
+.buttonx:hover {
+    background: rgba(255,255,255,.75);
+    border: 3px rgb(0,0,55) solid;
+    transition: all, 500ms;
+}
+
+.buttonx a:hover {
+    color: black;
+    transition: all, 500ms;
+}
+
+#ky {
+    text-align: center;
+    padding: 10px 10px 10px;
+    color: dimgrey;
+    background: white;
+}
+
+#ky1 {
+    font-size: 59px;
+    font-weight: 500;
+}
+
+#ky2 {
+    font-size: 35px;
+}
+
+#kylogo {
+    height: 60px;
+    display: inline-block;
+    margin: 0px 0 0 12px;
+}
+
+#lower-home {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    color: rgb(64,64,64);
+}
+
+#lower-home img {
+    border-radius: 50%;
+    margin: 20px 0 5px;
+}
+
+#photo2 li {
+    margin-left: 19px;
+    text-align:left;
+    list-style-type: square;
+}
+
+.header {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: -14px;
+    color: rgb(24,24,24);
+}
+
+#lower-home>li,
+#lower-home>p,
+#lower-home>span {
+    line-height: 1.3em;
+}
+
+.button2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    width: 180px;
+    border: 3px white solid;
+    font-size: 1.6em;
+    background-color: rgba(0,0,0,.25);
+    display: block;
+    transition: all, 500ms;
+}
+
+.button2 a {
+    padding-top: 2px;
+    color: black;
+    display: block; 
+    transition: all, 500ms;
+}
+
+.button2:hover {
+    background: rgba(255,255,255,.75);
+    border: 3px rgb(0,0,55) solid;
+    transition: all, 500ms;
+}
+
+.button2 a:hover {
+    color: black;
+    transition: all, 500ms;
+}
+
+#lower-button {
+    background-color: #cdcdcd;
+    padding: 10px 0 10px;
+}
+
+#logos {
+    background-color: rgb(190,200,190);
+    height: 400px;
+    margin-top: -17px;
+}
+
+#logos ul {
+    text-align: center;
+    padding: 0;
+}
+
+#logos li{
+        list-style-type: none;
+}
+
+#logos img{
+    height: 52px;
+    margin-top: 13px;
+}
+
+/***********************************************
+ABOUT PAGE
+************************************************/
+
+#bodyabout {
+    /*padding-top: 102px;*/
+}
+
+#main-content-about {
+    margin: 0 auto;
+    width: 92%;
+    text-align: left;
+    color: rgb(64,64,64);
+}
+
+h1,h2,h3 {
+    color: rgb(24,24,24);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr, td, th {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.jumbotronabout {
+    background: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)),url("../img/aboutbikerscopy.jpg");
+    background-position: 20% 30%;
+    background-size: cover;
+    height: 600px;
+    text-align: center;
+    margin-top: 99px;
+    color: white;
+    position: relative;
+}
+
+
+/***********************************************
+YOUTH PAGE
+************************************************/
+
+#body-youth {
+/*    padding-top: 136px;*/
+    background-color: white;
+}
+
+/*#logo-youth {
+    height: 65px;
+    float: left;
+    margin: 0 0 0 5%;
+}*/
+
+#browser-menu-youth {
+    display: none;
+}
+
+
+.jumbotron-youth {
+    background: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)),url("../img/sloane_youth.jpg");
+    background-position: 20% 30%;
+    background-size: cover;
+    height: 600px;
+    text-align: center;
+   /* margin-top: -10px;*/
+    color: white;
+    position: relative;
+    width: 100%;
+}
+
+#youth-text {
+    color: white;
+    font-size: 2.6em;
+    font-weight: 500;
+    background: rgb(55, 89, 145);
+}
+
+#lower-youth {
+    margin-top: -2px;
+    background: white;
+}
+
+#about-youth {
+    text-align: left;
+    width: 90%;
+    padding: 4px 0 0 0;
+    margin: 16px 0 0 6%;
+    background: #efefef;
+    float: left;
+    color: dimgrey
+}
+
+#about-youth h2 {
+    color: #232323;
+    margin-left: 3px;
+}
+
+#about-youth li {
+    margin-bottom: 4px;
+    margin-right: 3px;
+}
+
+#about-youth p {
+    margin-left: 5px;
+    margin-right: 3px;
+}
+
+#about-youth img {
+    border-radius: 0;
+    width: 96%;
+    margin: -10px 10px 0px;
+}
+
+#about-youth h4 {
+    margin-left: 5px;
+    margin-top: -10px;
+}
+
+#invest-youth {
+    text-align: center;
+    color: dodgerblue;
+    font-weight: 400;
+    font-size: 1.1em;
+}
+
+#tax-youth {
+    font-size: .7em
+}
+
+#youth-grads {
+    background: white;
+    width: 87%;
+    margin: 18px auto 10px;    
+}
+
+#grad1 {
+    float: left;
+    margin: 0 0 14px 0;
+}
+
+#youth-grads img {
+    border-radius: 50%;
+    float: left;
+    height: 150px;
+    display: inline-block;
+}
+
+.info {
+    float: left;
+    text-align: left;
+    width: 45%;
+    display: inline-block;
+    margin:0 0 5px 20px;
+}
+
+.name {
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.desc {
+    display: block;
+    margin-top: 125px;
+    text-align: left;
+}
+
+#long-range-goal {
+    float: left;
+    background-color: darkorange;
+    text-align: left;
+    width: 97%;
+    margin: -20px auto 20px;
+    clear: both;
+}
+
+#lrg {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+#long-range-goal p {
+    padding: 5px 5px 0 5px;
+}
+
+.youth-button {
+    width: 400px;
+}
+
+
+/***********************************************
+PHOTO PAGE - SLIDER!
+************************************************/
+
+/* Slideshow container */
+.slideshow-container {
+  /*max-width: 1000px;*/
+    height: 650px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.mySlides img {
+    height: auto;
+    max-height: 650px;
+    background-size: cover;
+    margin: auto;
+   /* display: block;*/
+    max-width: 1000px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+    
+  width: auto;
+  margin-top: -29px;
+  padding: 16px;
+  color: darkgray;
+  font-weight: bold;
+  font-size: 38px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 13px 0 0 13px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 13px 13px 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: rgb(233,102,0);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+/********************************************************
+VOLUNTEERS 
+*******************************************************/   
+
+#volunteers {
+    font-size: 3em;
+    font-weight: 500;
+}
+
+#volunteers-lower {
+    text-align: left;
+    width: 93%;
+    max-width: 1500px;
+    margin: 0 auto;
+    line-height: 26px
+}
+
+input[type="text"] {
+    margin-left: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px
+}
+
+#volsubmit {
+    font-weight: 500;
+    font-size: 1.4em;
+    border: 2px solid black;
+    width: 160px;
+    margin: 0 0 15px 95px;
+}
+
+
+
+/*************************
+Clearfix
+*************************/
+
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+
+#alt-header {
+    display: none;
+}
+
+/*****************************************************************
+--------------  RESPONSIVE
+*******************************************************************/
+
+@media (max-height: 470px){
+    
+    #main-text {
+        top: 40%;
+    }
+    
+    .button1 {
+        bottom: 28px; 
+    }
+    
+    #arrows {
+        bottom: 12px;
+    }
+    
+    #sunday {
+    padding-top: 150px;        
+    }
+    
+    #c2c {
+    margin-top: -40px;;
+    }
+    
+    .jumbotron {
+        height: 350px;
+    }
+    
+    #mobile_menu {
+        height: 120%;
+    }
+    
+    #mobile_menu a {
+        padding: 3px 0 3px;
+    }
+}
+
+@media (min-width: 1070px) {
+    #bodyhome  {
+        padding-top: 136px;
+    }
+    
+    #header-content {
+        margin: 0 auto;
+        max-width: 1400px;
+    }
+    
+    #browser_menu {
+        display: inline-block;
+        float: right;
+        font-size: 20px;
+        margin-top: 30px;
+    }
+    
+    #browser_menu a {
+        /*text-shadow: 2px 2px 1px #000;*/
+        margin-right: 17px;
+    }
+    
+    #lower-home {
+        max-width: 1400px;
+    }
+    
+    #mobile_menu {
+        display:none;
+    }
+    
+    .jumbotron {
+        margin-top: -83px;
+    }
+    
+    .buttonx {
+        bottom: 45px;
+    }
+    
+    #photo1,
+    #photo2,
+    #photo3 {
+        float: left;
+        width: 30.2%;
+        margin: 1.5%;
+        display: inline-block;
+    }
+    
+    #photo1 p:not(.header),
+    #photo2 p:not(.header),
+    #photo3 p:not(.header),
+    #photo2 li {
+        text-align: left;
+        line-height: 20px;
+    }
+    
+    #logos {
+        margin-top: 0;
+        padding-bottom; 10px; 
+        height: 100px;
+    }
+    
+    #logos ul {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    #logos li {
+        display: inline-block;
+        margin: 0 2.6% 0;
+    }
+    
+    #logos img{
+    height: 42px;
+    margin-top: 13px;
+}
+    .hamburger {
+        display: none;
+    }
+        
+    #bodyhome  {
+        padding-top: 134px;
+        text-align: center;
+    }
+    
+    #logo {
+        margin-left: 2%;
+    }
+    
+    
+/********************************************
+YOUTH RESPONSIVE
+*********************************************/ 
+    
+     #browser-menu-youth {
+        display: inline-block;
+        float: right;
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: -30px;
+    }
+    
+    #browser-menu-youth a {
+        margin-right: 17px
+    }
+        
+    #youthwidth {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    #about-youth {
+        float: left;
+        width: 60%;
+        margin-bottom: 20px;
+    }
+    
+    #youth-grads {
+        float: left;
+        width: 30%;
+        padding: 20px 0 0 30px;
+    }
+    
+    #long-range-goal {
+        float: left;
+        margin:0;
+        width: 97%;
+    }
+    
+    #long-range-goal p {
+        padding: 5px;
+    }
+    
+    .youth-footer {
+        clear: both;
+    }
+    
+    
+/********************************************************
+VOLUNTEERS RESPONSIVE
+*******************************************************/   
+    
+    
+    
+    
+    
+/*****************************************************************
+ALTERNATE HEADER
+*******************************************************************/    
+    
+    
+    
+    #alt-header {
+        display:none;
+    }
+    
+/****************************************************/ 
+   /* #logo {
+       display: none; 
+    }
+    
+    #browser_menu a{
+        display:none;
+    }
+    
+    #header {
+        text-align: center;
+    }
+    
+    #alt-header {
+        display: inline-block;
+        font-size: 4.1em;
+        margin: 0 10px 0 0;
+        letter-spacing: 1.2px;
+    }
+    
+    #nav_lines{
+        float: none;
+        display: inline-block;
+        margin-left: 18%;       
+    }
+    
+    .hamburger {
+        display: inline-block;
+    }
+    
+    .jumbotron {
+        margin-top: -90px;
+    }*/
+    
+}
