@@ -29,14 +29,33 @@ $("#arrowsUp").click(function(){
 });
 
 $("#nav_lines").on("click", function(){
-    $("#mobile_menu").slideToggle(600);
+    $("#mobile_menu").slideToggle(400);
     $(".hamburger").toggleClass("hamburger_toggle");
+});
+
+$(".mobilephotos").on("click", function(e){
+    e.preventDefault();
+    $("#photo_mobilesubmenu").slideToggle(400);
 });
 
 
 $(window).resize(function(){
     if($(this).width() > 943){
-   $("#mobile_menu").slideUp(100); 
-    }//close full screen drop menu when pc screen increases.
+   $("#mobile_menu").slideUp(100);
+   $(".hamburger").removeClass("hamburger_toggle");        
+    }//close full screen drop menu when pc screen increases and hamburger turns black.
 });
+
+$(".photomenu").click(function(e){
+    e.preventDefault()
+});
+
+$(".photomenu, #photo_submenu").mouseenter(function(e){
+    $("#photo_submenu").css("display","block")
+});
+
+$(".photomenu, #photo_submenu").mouseleave(function(e){
+    $("#photo_submenu").css("display","none")
+});
+
 
