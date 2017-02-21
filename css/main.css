@@ -242,10 +242,10 @@ HOME PAGE
 }
 
 .hamburger_toggle {
-    border-top: 4px red solid;
+    border-top: 4px rgb(108, 62, 136) solid;
     box-shadow: 
-    0 11px 0 0 red,
-    0 22px 0 0 red;
+    0 11px 0 0 rgb(108, 62, 136),
+    0 22px 0 0 rgb(108, 62, 136);
 /********************3 lines menu*/
 }
 
@@ -269,7 +269,7 @@ HOME PAGE
     border-bottom: 2px white solid;
     width: 100%;
     transition: all, 500ms;
-    background-color: forestgreen;
+    background-color: rgb(108, 62, 136);
 }
 
 /*
@@ -283,6 +283,10 @@ HOME PAGE
     background-color: white;
     text-shadow: none;
     transition: all, 500ms;
+}
+
+#mobile_menu .selected{
+    color: rgb(255,92,0); 
 }
 
 #photo_mobilesubmenu{
@@ -367,7 +371,7 @@ HOME PAGE
 
 #ky {
     text-align: center;
-    padding: 10px 10px 10px;
+    padding: 20px 10px;
     color: dimgrey;
     background: white;
 }
@@ -378,7 +382,8 @@ HOME PAGE
 }
 
 #ky2 {
-    font-size: 35px;
+    font-size: 55px;
+    font-weight: 500;
 }
 
 #kylogo {
@@ -452,6 +457,9 @@ HOME PAGE
 #lower-button {
     background-color: #cdcdcd;
     padding: 10px 0 10px;
+    clear:both;
+    width: 100%;
+    display: block;
 }
 
 #logos {
@@ -459,7 +467,7 @@ HOME PAGE
     height: 350px;
 /*    margin-top: -17px;*/
     padding: 1px 0 0 0;
-    border-top: 5px solid purple;
+    border-top: 5px solid rgb(108, 62, 136);
 }
 
 #logos p {
@@ -473,7 +481,8 @@ HOME PAGE
 }
 
 #logos li{
-        list-style-type: none;
+    list-style-type: none;
+    margin-bottom: 20px;
 }
 
 #logos img{
@@ -483,6 +492,11 @@ HOME PAGE
 
 #logos a[href*="outcycling"] img {
     height: 52px;
+    margin-top: 5px;
+}
+
+#logos a[href*="cause"] img {
+    height: 75px;
     margin-top: 5px;
 }
 
@@ -515,7 +529,7 @@ tr, td, th {
 }
 
 .jumbotronabout {
-    background: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)),url("../img/aboutheroimage.jpg");
+    background: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)),url("../img/slides/NYCPR16/160612_3488_barnett.jpg");
     background-position: 20% 33%;
     background-size: cover;
     height: 600px;
@@ -523,6 +537,16 @@ tr, td, th {
     margin-top: 99px;
     color: white;
     position: relative;
+}
+
+#aboutPhotoColumn {
+    margin-top: 40px;
+}
+
+#aboutPhotoColumn img{
+    width: 80%;
+    margin-bottom: 20px; 
+    
 }
 
 
@@ -699,6 +723,7 @@ VOLUNTEERS
     line-height: 26px
 }
 
+/*
 input[type="text"] {
     margin-left: 10px;
 }
@@ -714,20 +739,43 @@ input[type="checkbox"] {
     width: 160px;
     margin: 0 0 15px 95px;
 }
+*/
+
+#volunteer_button {
+    display: inline-block;
+    margin: 0 auto 5px;
+    
+}
 
 
 /********************************************************
 REGISTER / 
 *******************************************************/ 
 
+.jumbotronregister {
+    background: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)),url("../img/slides/NYCPR16/160612_3488_barnett.jpg");
+    background-position: 60% 23%;
+    background-size: cover;
+    height: 600px;
+    text-align: center;
+    margin-top: 99px;
+    color: white;
+    position: relative;
+}
+
 .main-content-register {
-    margin: 0 auto;
+    margin: 120px 0 1px 7%;
     width: 90%;
 }
 
+#register-text {
+    margin-bottom: 30px;
+}
+
 #eventbrite {
-    height: 150px;
+    height: 350px;
     background: lightblue;
+    margin-bottom: 10px;
 }
 
 #jersey img{
@@ -748,19 +796,34 @@ REGISTER /
 #paypal {
     height: 60px;
     background: lightblue;
+    margin: 0 auto 10px; 
 }
 
 #order {
     margin-bottom: 40px;
 }
 
-#paypal {
-  margin: 0 auto; 
-}
-
 table {
     text-align: left;
     margin-bottom: 20px;
+}
+
+#registerPhotoColumn {
+    margin-top: 20px;
+}
+
+#registerPhotoColumn img{
+    width: 80%;
+    margin-bottom: 20px; 
+    
+}
+
+#tempRegisterPhoto {
+    margin-top: 40px;
+}
+
+#tempRegisterPhoto img {
+    width: 80%;
 }
 
 
@@ -773,11 +836,6 @@ Clearfix
   content: " ";
   display: table;
   clear: both;
-}
-
-
-#alt-header {
-    display: none;
 }
 
 /*****************************************************************
@@ -819,6 +877,55 @@ Clearfix
     }
 }
 
+
+@media (min-width: 700px) {
+    
+    #lowerAboutPage{
+        margin: 0 0 0 7%;
+    }
+ 
+    #main-content-about {
+        float: left;
+        width: 60%;
+        margin: 0 10px 0 40px;
+    }
+    
+    #aboutPhotoColumn {
+        float: left;
+        width: 31%;
+        max-width: 385px;
+    }
+    
+    #logos {
+        clear:both;
+    }
+    
+    #upper-content-register {
+        float: left;
+        width: 60%;
+        margin: 0 10px 0 40px;
+    }
+    
+    #registerPhotoColumn {
+        float: left;
+        width: 31%;
+        max-width: 385px;
+    }
+    
+    #tempRegisterPhoto {
+        width: 100%;
+        float: left;
+        margin: 0 0 20px;
+    }
+    
+    #tempRegisterPhoto img{
+        width: 100%;
+    }
+    
+    
+}
+
+
 @media (min-width: 1070px) {
     
     #nav_lines, .hamburger {
@@ -853,7 +960,7 @@ Clearfix
 /*        display:block;*/
         position: absolute;
         width: 120px;
-        right: 200px;
+        right: 220px;
         top: 90px;
         background: #fff;
         
@@ -866,6 +973,27 @@ Clearfix
     
     #photo_submenu a:first-child{
         padding-top: 10px;
+    }
+    
+    #browser_menu [href*="register"] {
+        display: inline-block;
+        height: 27px;
+        width: 85px;
+        line-height: 27px;
+        border: 2px solid rgb(52,52,52);
+        border-radius: 7%;
+        padding-bottom: 27px;
+        color: #eee;
+        background-color: rgb(108, 62, 136);
+        transition: 300ms;
+        transition-property: all;
+    }
+    
+    #browser_menu [href*="register"]:hover {
+        color: rgb(233,102,0);
+        background-color: rgb(88,88,88);
+        transition: 300ms;
+        transition-property: all;
     }
     
     #lower-home {
@@ -908,8 +1036,8 @@ Clearfix
     
     #logos {
         margin-top: 0;
-        padding-bottom; 50px; 
-        height: 160px;
+        padding-bottom; 40px; 
+        height: 120px;
     }
     
     #logos ul {
@@ -924,7 +1052,7 @@ Clearfix
     
     #logos img{
 /*    height: 42px;*/
-    margin-top: 6px;
+        margin-top: 16px;
 }
     .hamburger {
         display: none;
@@ -1009,54 +1137,15 @@ REGISTER RESPONSIVE
     }
     
     #sizing, #order {
-    float: left;
-    width: 47%;
-    margin: 0 9px;
+        float: left;
+        width: 47%;
+        margin: 0 9px;
     }
     
-    
-/*****************************************************************
-ALTERNATE HEADER
-*******************************************************************/    
+
     
     
     
-    #alt-header {
-        display:none;
-    }
     
-/****************************************************/ 
-   /* #logo {
-       display: none; 
-    }
     
-    #browser_menu a{
-        display:none;
-    }
-    
-    #header {
-        text-align: center;
-    }
-    
-    #alt-header {
-        display: inline-block;
-        font-size: 4.1em;
-        margin: 0 10px 0 0;
-        letter-spacing: 1.2px;
-    }
-    
-    #nav_lines{
-        float: none;
-        display: inline-block;
-        margin-left: 18%;       
-    }
-    
-    .hamburger {
-        display: inline-block;
-    }
-    
-    .jumbotron {
-        margin-top: -90px;
-    }*/
-    
-}
+ 
